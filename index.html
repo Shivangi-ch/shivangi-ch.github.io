@@ -4,7 +4,349 @@
     <meta charset="UTF-8">
     
     <meta name="viewport" content="width=device-width", initial-scale-1.0>
-    <link rel="stylesheet" href="./index.css">
+<!--     <link rel="stylesheet" href="./index.css"> -->
+    <style>
+        * {
+    margin:0;
+    overflow-x: hidden;
+}
+html {
+    scroll-behavior: smooth;
+    
+}
+
+nav {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 8vh ; 
+    /* width:100vw; */
+    /*background-color: rgb(87, 84, 84);*/
+    background-color: rgba(31, 31, 31, 0.37);
+    /* overflow: hidden; */
+    /* position: fixed; */
+    /* top: 0; */
+    /* opacity: 0.1; */
+    
+}
+h3{
+    color:rgba(5, 5, 5, 0.911);
+    font-size: 22px;
+}
+ .sticky {
+    position: fixed; 
+    top: 0;
+    width: 100%;
+}
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 45%;
+  justify-content: space-around;
+  
+}
+.links li {
+    list-style: none;
+    /* transition: transform .2s;  */
+}
+.links a {
+    text-decoration:none ;
+    font-size: 24px; 
+   color:rgb(0, 0, 0);
+   opacity: 0.7;
+   font-family: 'Alegreya Sans SC';
+   transition: transform .5s; 
+   font-weight: lighter;
+}
+
+
+.links a:hover {
+    color:rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+
+.links1 {
+    display: none;
+}
+
+
+.tech-icon {
+    font-size:100px;
+    color:#00979c;
+ }
+ .skill-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 90px;
+    margin-left: 13vw;
+    margin-right: 13vw;
+    
+ }
+
+ @media screen and (max-width:1500px) {
+    .links{
+        width:80%;
+    }
+} 
+
+ @media screen and (max-width:600px) {
+    .tech-icon {
+        font-size: 40px;
+    }
+    body {
+        overflow-x: hidden;
+    }
+   
+   .links , .lside {
+       display: none;
+   }
+   .links1 {
+        display: flex; 
+        width: 80%;
+        justify-content: space-around; 
+   }
+   .links1 li {
+        list-style: none; 
+    }
+    .links1 a {
+        text-decoration:none ;
+        font-weight: bold;
+        color:rgb(8, 8, 8);
+    }
+     
+ }
+
+h1 {
+    text-align: center;
+    margin-top: 90px;
+    font-size: 50px;
+    /* font-family: 'Alegreya SC'; */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1px;
+    font-weight:lighter;
+    color: rgb(0, 0, 0);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/*  */
+
+ #s1{
+    /* background-color: rgb(255, 255, 255); */
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; */
+    background: linear-gradient(-45deg, #00979ce1, #b99696, #72eaffe8, #9b9393);
+    background-size: 400% 400%;
+    animation: gradient 6s ease infinite;
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    
+ }
+ 
+#s2{
+    height: 100vh;
+    /* background-color:rgb(255, 255, 255); */
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; */
+    background-color: rgba(255, 223, 231, 0.534);
+    display: block;
+    margin: 0;
+    width: 100vw;
+}
+
+#s3{
+    height: 100vh;
+    /* background-color: rgb(255, 255, 255); */
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; */
+    background-color: rgba(205, 240, 255, 0.459);
+    display: block;
+    width: 100vw;
+    margin: 0px;
+}
+#s4{
+    height: 100vh;
+    /* background-color: rgb(255, 255, 255); */
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; */
+    background-color: rgba(255, 223, 231, 0.534);
+    display: block;
+    width: 100vw;
+    margin: 0;
+}
+#s5{
+    height: 92vh;
+    /* background-color: rgb(255, 255, 255); */
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; */
+    background-color:rgba(205, 240, 255, 0.459);
+    display: block;
+    width: 100vw;
+    margin: 0;
+    position: relative;
+    /* border-bottom: 55px solid rgba(0, 0, 0, 0.329);; */
+}
+ #footer {
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0px;
+    background:rgba(97, 97, 97, 0.39);
+    width:100vw;
+    height:7vh;
+    font-family:'Source Sans Pro' ;
+    letter-spacing: 1px;
+    font-size: 13px;
+    color:black;
+ }
+h2{
+    font-size: 30px;
+    /* text-align: center; */
+    color:rgb(0, 0, 0);
+    margin-top: 120px;
+    font-family:'Source Sans Pro' ;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    /* text-decoration-line:underline; */
+    padding: 15px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    width: 190px;
+}
+h4{
+    text-align: center;
+    /* margin-left: 12vw;
+    margin-right: 12vw;
+    margin-top: 65px; */
+    font-size: 22px;
+    font-family:'Didact Gothic';
+    margin-top: 20px;
+    font-weight: bold;
+    
+
+}
+ 
+ /* .abc{
+     font-size: 22px;
+     align-items: right;
+     justify-items: center;
+     margin-left: 25vw;
+     margin-top: 15px;
+     font-family:'Didact Gothic';
+ */
+
+ 
+ .abc li{
+     
+     font-size: 16px;
+     font-family:'Source Sans Pro' ;
+     text-align: center;
+     margin-top: 15px;
+ }
+ h5{
+     font-size: 22px;
+     font-family: 'Source Sans Pro' ;
+     text-align: center;
+     margin-top: 10px;
+ }
+ p{
+     text-align: center;
+     font-family: 'Source Sans Pro';
+     margin-top: 23px;
+     font-size: 19px;
+     color:rgb(0, 0, 0);
+ }
+ .acad h4{
+     font-size: 25px;
+     text-align: center;
+     font-weight: bold;
+     font-family: 'Source Sans Pro';
+     margin-top: 15px;
+ }
+ .acad h3{
+     font-size: 18px;
+     text-align: center;
+     font-family: 'Source Sans Pro';
+     margin-top: 5px;
+     font-weight: lighter;
+
+ }
+ .acad p{
+     font-size: 16px;
+     font-family: 'Source Sans Pro';
+     color: rgb(3, 138, 120);
+     margin-top: 2px;
+ }
+ .contact h2{
+    font-size: 30px;
+    color:rgb(0, 0, 0);
+    margin-top: 170px;
+    font-family:'Source Sans Pro' ;
+
+    letter-spacing: 1px;
+    /* text-decoration-line:underline; */
+    padding: 15px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+     width: 190px;
+    
+
+ }
+ .contact p{
+     font-size: 19px;
+     font-family: 'Source Sans Pro';
+     margin-top: 70px;
+ }
+ #s4 h3{
+     font-family:'Source Sans Pro';
+     font-size: 18px;
+     margin-top: 70px;
+     text-align: center;
+     font-weight: lighter;
+     letter-spacing: 1px;
+ }
+ 
+ .icon {
+    margin-right:20px;
+ }
+
+
+ /* .respo {
+    display: none;
+} */
+
+/* .respo div {
+    width:25px;
+    height:2px;
+    margin:5px;
+    background-color:rgb(0, 0, 0);
+} */   
+    
+/* body {
+    background: linear-gradient(-45deg, #979696, #616161, #72eaffe8, #4d4d4d);
+    background-size: 400% 400%;
+    animation: gradient 8s ease infinite;
+} */
+    </style>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
